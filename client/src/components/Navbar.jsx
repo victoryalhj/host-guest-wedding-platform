@@ -3,21 +3,31 @@
 import { useState } from 'react';
 import './Navbar.css';
 
-export default function Navbar() {
+export default function Navbar({currentTab, setCurrentTab}) {
    
-  const [selectedBtn, setSelectedBtn] = useState('Invitation');
+  // const [selectedBtn, setSelectedBtn] = useState('Invitation');
   const [selectedSecondBtn, setSelectedSecondBtn] = useState('');
+  function handleScrollTo (btnName) {
+    setSelectedSecondBtn(btnName)
+
+    const targetId = btnName.toLowerCase();
+    const element = document.getElementById(targetId);
+
+    if (element) {
+      element.scrollIntoView({ behavior:'smooth'})
+    }
+  }
 
     return (
     <header className='navbar-container'>
       <div className='tab-btn'>
         <button className={
-           selectedBtn === 'Invitation' ? 'tab-btn active' : 'tab-btn'}
-           onClick={() => setSelectedBtn('Invitation')}>Invitation
+           currentTab === 'Invitation' ? 'tab-btn active' : 'tab-btn'}
+           onClick={() => setCurrentTab('Invitation')}>Invitation
         </button>
         <button className={
-          selectedBtn === 'Dashboard' ? 'tab-btn active' : 'tab-btn'}
-          onClick={() => setSelectedBtn('Dashboard')}>Dashboard
+          currentTab === 'Dashboard' ? 'tab-btn active' : 'tab-btn'}
+          onClick={() => setCurrentTab('Dashboard')}>Dashboard
         </button> 
       </div>
       <div className='tab-btn'>
@@ -25,7 +35,10 @@ export default function Navbar() {
             <button 
               key={btn} 
               className={selectedSecondBtn === btn ? 'tab-btn active-bottom' : 'tab-btn'}
-              onClick={() => setSelectedSecondBtn(btn)}
+              onClick={() => {
+                handleScrollTo(btn)
+              
+              }}
             > {btn}
             
             </button>

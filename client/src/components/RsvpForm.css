@@ -1,0 +1,80 @@
+.rsvp {
+  color: #9a7447;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+.rsvp h3 {
+  margin: 3rem;
+}
+.rsvp p {
+  margin: 2rem;
+}
+.rsvp input {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 1rem;
+  border: 1px solid #a68a6c;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-area p {
+  font-size: 10px;
+  text-align: left;
+  margin: 5px 0 5px 0;
+}
+.form-area button {
+  border: 1px solid #9a7447;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+
+}
+
+/* attending */
+.attend-area {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.attend-area button {
+  color: #9a7447;
+  flex: 1;
+  width: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: transparent;
+  white-space: nowrap;
+}
+.attend-area button.active {
+  background-color: #9a7447;
+  color: white;
+}
+
+/* allergy */
+.allergy-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.allergy-area button {
+  display: flex;
+  justify-content: center;
+  color: #9a7447;
+}
+.allergy-area button.active {
+   background-color: #9a7447;
+   color: white;
+}
+
+/* etc area */
+.form-area .etc-btn {
+  cursor: pointer;
+  background-color: #9a7447;
+  color: white;
+}

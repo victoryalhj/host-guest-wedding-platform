@@ -3,10 +3,11 @@
 const mongoose = require('../models/db');
 
 const rsvpSchema = new mongoose.Schema({
-  title: String,
-  attendance: Boolean,
+  name: String,
+  attendance: String,
   guestCount: Number,
-  allergy: String
+  allergy: [String],
+  option: String
 }, {
   timestamps: true
 });

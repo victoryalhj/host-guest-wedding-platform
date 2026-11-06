@@ -1,0 +1,34 @@
+.divider {
+  width: 500px;
+  height: 0.1px;
+  background-color: #9a7447;
+  margin: 50px auto;
+  border: none;
+}
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #9a7447;
+}
+
+/* guest-response-area */
+.guest-response-area button {
+  background-color: transparent;
+  color: #9a7447;
+  border: 1px solid #9a7447;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 5px 15px 10px 0;
+}
+
+.guest-data-list {
+  display: flex;
+  gap: 15px;
+}
+.guest-data-list-reply {
+  display: flex;
+  gap: 15px;
+}

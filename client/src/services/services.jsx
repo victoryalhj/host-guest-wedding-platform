@@ -2,8 +2,27 @@
 
 const URL = 'http://localhost:3000';
 
-//Rvsp data to server
-export async function postRsvpData(rsvpData) {
+// router.get('/rsvp', getRsvpList)
+// router.get('/guestbook', getGuestbookList)
+
+export async function getRsvpList () {
+  const response = await fetch(URL);
+  if (!response.ok) {
+    throw new Error('Failed to get Rsvp data')
+  } 
+  return response.json();
+}
+
+export async function getGuestbookList () {
+  const response = await fetch(URL);
+  if(!response.ok) {
+    throw new Error('Failed to get guestbook data');
+  }
+  return response.json();
+}
+
+//Rsvp data to server
+export default async function postRsvpData(rsvpData) {
   const response = await fetch(`${URL}/rsvp`, {
     method: 'POST',
     body: JSON.stringify(rsvpData),

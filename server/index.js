@@ -10,10 +10,11 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
+app.get('/', (req, res) => {
+    res.send('HostGuest Wedding server is running');
+})
+
 app.listen(3000, () => {
   console.log('Server is running')
 })
 
-app.get('/', (req, res) => {
-    res.send('HostGuest Wedding server is running');
-})

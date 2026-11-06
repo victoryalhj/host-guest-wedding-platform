@@ -1,0 +1,78 @@
+.divider {
+  width: 500px;
+  height: 0.1px;
+  background-color: #9a7447;
+  margin: 50px auto;
+  border: none;
+}
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.image-container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.our-invitation {
+  max-width: 500px;
+  text-align: center;
+  color: #9a7447;
+}
+
+/* save the date */
+.save-the-date {
+  text-align: center;
+  color: #9a7447;
+  margin: 30px 0 30px 0;
+}
+.save-the-date img {
+  width: 30rem;
+}
+.save-the-date button {
+  background-color: #9a7447;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 5px 0 10px 0;
+}
+
+/* gallery */
+.gallery {
+  
+}
+
+/* location */
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #9a7447;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.location-btn-area {
+  display: flex;
+  width: 100%;
+}
+.location-btn-area button {
+  flex: 1;
+  width: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  color: #9a7447;
+  border: 1px solid #9a7447;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 5px 15px 10px 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
